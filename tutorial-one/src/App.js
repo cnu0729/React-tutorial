@@ -15,17 +15,22 @@ import './App.css';/* CSS를 얻어와 아래 작성된 태그 옆에 className�
  R01_ClassComponent.js를 가져와서 App.js에 적용
  R01_ClassComponent.js R01이라는 별칭을 사용해서 App.js에 적용
 */
-import R01 from './R01_ClassComponent.js';
-import R02 from './R02_FunctionComponent.js';
-import Props1 from './R03_Prop.js';
-import Props2 from './R04_Props2.js';
-import Props3 from './R05_Props3.js';
-import 예제1번 from './R06_State1.js'; // '' "" 크게 상관 없음
-import 예제2번 from './R07_State2.js';
-import 예제3번 from './R08_State3.js';
-import 예제4번 from './R09_State4.js';
-import 예제5번 from './R10_State5.js';
-import 예제6번 from './R11_State6.js';
+import R01 from './component/R01_ClassComponent.js';
+import R02 from './component/R02_FunctionComponent.js';
+import Props1 from './component/R03_Prop.js';
+import Props2 from './component/R04_Props2.js';
+import Props3 from './component/R05_Props3.js';
+import 예제1번 from './component/R06_State1.js'; // '' "" 크게 상관 없음
+import 예제2번 from './component/R07_State2.js';
+import 예제3번 from './component/R08_State3.js';
+import 예제4번 from './component/R09_State4.js';
+import 예제5번 from './component/R10_State5.js';
+import 예제6번 from './component/R11_State6.js';
+import 컨텍스트1 from './component/R12_Context1.js';
+import 컨텍스트2 from './component/R13_Context2.js';
+import 부트스트랩1 from './component/R14_Bootstrap.js';
+import 컨텍스트3 from './component/R15_Context3/Parent.js';
+import 멤버가입 from './component/R16_Context4/최종출력공간.js';
 function App() {
 
   return (
@@ -40,11 +45,11 @@ function App() {
     
     {/*<R01/>*/}
     {/*<R02/>*/}
-    <Props1 num='1' name='홍길동' age='20' score='90' />
-    <Props1 num='2' name='홍길은' age='30' score='80' />
-    <Props1 num='3' name='홍길금' age='40' score='70' />
-    <h3>Props 예제 2번 사용하기</h3>
-    <Props2 name='강감찬' age='72' gender='남자' />
+    {/* <Props1 num='1' name='홍길동' age='20' score='90' />  */}
+    {/* <Props1 num='2' name='홍길은' age='30' score='80' />  */}
+    {/* <Props1 num='3' name='홍길금' age='40' score='70' />  */}
+    {/* <h3>Props 예제 2번 사용하기</h3> */}
+    {/* <Props2 name='강감찬' age='72' gender='남자' /> */}
     {/*
     실습문제
     Prop3 만들어서
@@ -61,13 +66,18 @@ function App() {
     </div>
     */}
 
-    <예제1번 />
-    <예제2번 />
-    <예제3번 init="50" step="10"/>
-    <예제4번 init="40" years="1" />
+    {/* <예제1번 /> */}
+    {/* <예제2번 /> */}
+    {/* <예제3번 init="50" step="10"/> */}
+    {/* <예제4번 init="40" years="1" /> */}
     {/*init = 처음에 시작할 숫자값 step = 몇 씩 숫자가 커지고 작아질 것인가 */ }
-    <예제5번 />
-    <예제6번 />
+    {/* <예제5번 /> */}
+    {/* <예제6번 /> */}
+    {/* <컨텍스트1 /> */}
+    {/* <부트스트랩1 />  */}
+    {/* <컨텍스트2 /> */}
+    {/* <컨텍스트3 /> */}
+    <멤버가입 />
     </div>
   );
 }
