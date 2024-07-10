@@ -1,0 +1,37 @@
+.Game {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.Game-input {
+  margin-right: 8px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.Game-button{
+  padding: 5px 10px;
+  border: none;
+  background-color: #28a745;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.Game-button:hover {
+  background-color: #218838;
+}
+.Game .restart-button {
+    padding: 3px 6px;
+    cursor: pointer;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 4px;
+  }
+  
+ .Game .restart-button:hover {
+    background-color: #e53935;
+  }

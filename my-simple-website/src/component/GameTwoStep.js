@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import { Link } from "react-router-dom";
+import './TicTapToe.css';
 
 const GameTwoStep = () => {
     const [guess, setGuess] = useState('');
@@ -39,22 +40,23 @@ const GameTwoStep = () => {
         setIsCorrect(false);
     }
     return(
-        <div>
-            <h1>스무고개 2단계</h1>
+        <div className="Game">
+            <h1>??GUESS NUMBER LEVEL2</h1>
             <form onSubmit={handleSubmit}>
                 <input 
                     type="number"
                     value={guess}
                     onChange={handleChange}
                     placeholder="1~30 까지 숫자 입력"
+                    className="Game-input"
                 />
-                <button type="submit">추측하기</button>
+                <button className="Game-button" type="submit">추측하기</button>
             </form>
             <p>{message}</p>
             { isCorrect ?
-                        ( <Link to="/game"><button>1단계로 돌아가기</button></Link>)
+                        ( <Link to="/game"><button className="restart-button">1단계로 돌아가기</button></Link>)
                         :
-                        ( <button onClick={handleRestart}>재시작버튼</button> )}
+                        ( <button className="restart-button" onClick={handleRestart}>재시작버튼</button> )}
             
         </div>
     )

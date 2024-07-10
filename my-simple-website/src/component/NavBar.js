@@ -9,7 +9,7 @@ const NavBar = () => {
           <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/game">숫자맞추기 게임</Link>
+          <Link to="/game">NUMBER GAME</Link>
         </li>
         {/* 2단계 링크를 NavBar에는 작성하지 않음
             -> 1단계를 통과해야 2단계 링크를 보여줄 것
@@ -17,7 +17,7 @@ const NavBar = () => {
           <Link to="/gametwostep">GameTwoStep</Link>
         </li>
          */}
-        <li><Link to="/todolist">할 일 목록 작성하기</Link></li>
+        <li><Link to="/todolist">TO DO LIST</Link></li>
         <li><Link to="/tictaptoe">TicTapToe GAME</Link></li>
       </ul>
     </nav>
