@@ -1,0 +1,50 @@
+.typing-test{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.typing-test p{
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.typing-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.typing-test textarea {
+    width: 268px;
+    height: 96px;
+    border-radius: 10px;
+    resize: none; /* 사용자가 텍스트 영역 크기 변경 불가 */
+    font-size: 20px;
+}
+
+.character-image {
+    width: 100px;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid rgb(109, 109, 109);
+}
+
+.result {
+    margin-top: 20px;
+}
+
+.restart-button {
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+  }
+  
+  .restart-button:hover {
+    background-color: #e53935;
+  }

@@ -24,8 +24,22 @@ const TicTapToe= () => {
   // 게임 상태에 따라 사용자한테 보여줄 메세지 표현
   const [message, setMessage] = useState(''); //빈공간으로 놓기 (처음에는 할 말 없기 떄문)
   //사용자가 정답을 확인하면 다음단계로 이동하는 버튼이 보이게 생성
+  const [timer, setTimer] = useState(5);
   const [isCorrect, setIsCorrect] = useState(false); //정답확인 전이라 false
 
+  useEffect(() => {
+    let countdown; // count = 숫자 down = 내림 숫자가 점점 내려간다는 영어
+    if( timer > 0 ){ // 남은 시간이 0보다 크다면 숫자를 점점 줄이겠다
+        //점점 시간이 줄어드는 효과를 만들어서 적용
+        countdown = setTimeout(() => {
+            setTimer(timer - 1);
+        }, 1000);
+
+    } else if (timer === 0) { //남은 시간이 없다면
+        alert("시간초과 ! 게임이 종료되었습니다.");
+    }
+    
+});
   //     ↓ 숫자 클릭하기
   const handleNumberClick = (number) => {
   // 만약에 현재 사용자가 클릭해야하는 숫자와 사용자가 클릭한 숫자가 서로 일치하는가?
@@ -36,6 +50,7 @@ const TicTapToe= () => {
         setIsCorrect(true);
       } else {
         setNextNumber(nextNumber + 1);
+        setTimer(5);
       }
     } else {
      //틀렸을경우 메세지 보여주기
@@ -51,12 +66,14 @@ const TicTapToe= () => {
     setNextNumber(1);
     //메세지 초기화
     setMessage('');
+    setTimer(5);
     setIsCorrect(false);
   };
 
   return (
     <div className="tictaptoe-container">
       <h1>TicTapToe</h1>
+      <div className='timer'>남은시간 : {timer}초</div>
       <div className="tictaptoe-grid">
         {/*       map(= system.out.print) */}
         { numbers.map((number) => ( //          ↓ 숫자클릭하기
@@ -68,7 +85,7 @@ const TicTapToe= () => {
       <p className="message">{message}</p>
       {/* 예를 들어 수를 모두 맞출 경우에만 다음 단계로 이동 버튼 보여주기 */}
       { isCorrect ? 
-                        (<Link to="/TTTTwoStep"><button>다음 단계로 이동</button></Link>) 
+                        (<Link to="/TTTTwoStep"><button className="restart-button">다음 단계로 이동</button></Link>) 
                         : 
                         ( <button onClick={handleRestart} className="restart-button">게임 재시작</button> ) }
     </div>

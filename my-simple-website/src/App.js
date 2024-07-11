@@ -9,6 +9,7 @@ import Header from "./component/Header";
 import TodoList from "./component/TodoList";
 import TicTapToe from "./component/TicTapToe";
 import TTTTwoStep from './component/TTTTwoStep';
+import TypingTest from './component/TypingTest';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/todolist" element={<TodoList />} />
         <Route path="/tictaptoe" element={<TicTapToe />} />
         <Route path="/TTTTwoStep" element={<TTTTwoStep/>} />
+        <Route path="/TypingTest" element={<TypingTest />} />
       </Routes>
     </div>
   );
