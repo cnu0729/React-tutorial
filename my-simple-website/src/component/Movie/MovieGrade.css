@@ -1,0 +1,28 @@
+.movie-container{
+    text-align: center;
+}
+.movie-content{
+    display: flex; /* 한줄 정렬 */
+    flex-wrap: wrap;
+    /* div 태그 안에서 */
+    justify-content: center;
+}
+.movie{
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    width: 200px;
+    box-shadow: 0 4px 8px #ddd;
+}
+.movie img{
+    width: 100%; /* 이미지가 movie클래스 크기만큼 100% 설정 */
+    border-radius: 5px;
+}
+.movie h2{
+    font-size: 16px;
+    margin: 10px 0;
+}
+.movie p{
+    margin: 5px 0;
+}

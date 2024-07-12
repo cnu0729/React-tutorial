@@ -20,6 +20,7 @@ const NavBar = () => {
         <li><Link to="/todolist">TO DO LIST</Link></li>
         <li><Link to="/tictaptoe">TicTapToe GAME</Link></li>
         <li><Link to="/TypingTest">Typing Contest</Link></li>
+        <li><Link to="/MovieGrade">MovieGrade</Link></li>
       </ul>
     </nav>
   );
