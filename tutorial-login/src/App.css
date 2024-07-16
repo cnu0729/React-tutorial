@@ -14,6 +14,11 @@
   background-color: white;
   border: 3px solid #ccc;
 }
+.signup-container > label{
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+}
 
 .signup-container > label > input {
   flex-basis: 65%;
