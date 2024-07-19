@@ -4,13 +4,18 @@ import Game from "./component/Game";
 import GameTwoStep from "./component/GameTwoStep";
 import { Routes, Route } from "react-router-dom";
 import Home from "./component/Home";
-import NavBar from "./component/NavBar";
-import Header from "./component/Header";
+import NavBar from "./component/Layout/NavBar";
+/*
+Can't resolve './component/NavBar' in 'C:\Users\user1\react-workspace\my-simple-website\src'
+*/
+import Header from "./component/Layout/Header";
+import Footer from "./component/Layout/Footer";
 import TodoList from "./component/TodoList";
-import TicTapToe from "./component/TicTapToe";
-import TTTTwoStep from './component/TTTTwoStep';
+import TicTapToe from "./component/TicTapToe/TicTapToe";
+import TTTTwoStep from './component/TicTapToe/TTTTwoStep';
 import TypingTest from './component/TypingTest';
 import MovieGrade from './component/Movie/MovieGrade';
+
 
 function App() {
   return (
@@ -28,6 +33,7 @@ function App() {
         <Route path="/TypingTest" element={<TypingTest />} />
         <Route path="/MovieGrade" element={<MovieGrade />} />
       </Routes>
+      <Footer />
     </div>
   );
 }

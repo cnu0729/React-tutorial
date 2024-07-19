@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './TTTTwoStep.css';
+import '../TTTTwoStep.css';
 
 const 배열랜덤섞기 = (array) => {
     return array.sort(() => Math.random() - 0.5);
