@@ -68,7 +68,7 @@ nav ul li a:hover {
   color: #fff;
   padding: 20px 0;
   text-align: center;
-  position: fixed; /* 위치 고정 */ 
+  position: fixed; /*위치 고정*/
   width: 100%;
   bottom: 0;
 }

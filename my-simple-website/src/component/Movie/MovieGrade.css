@@ -1,5 +1,6 @@
 .movie-container{
     text-align: center;
+    margin-bottom: 100px;
 }
 .movie-content{
     display: flex; /* 한줄 정렬 */
