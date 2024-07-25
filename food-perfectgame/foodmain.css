@@ -26,12 +26,13 @@ a :hover{
 }
 
 .playground-box{
-    display: inline-block;
     width: 50%;
     height: 50%;
     text-align: center;
     justify-content: center;
     position: absolute;
+    margin: 0 auto;
+
 }
 #pg-1 {
     padding: 30px;
@@ -61,3 +62,8 @@ a :hover{
     text-align: center;
     margin: 5%;
 }
+
+  .card {
+    margin-bottom: 30px; /* 카드 간의 하단 여백을 설정 */
+  }
+  

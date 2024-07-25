@@ -1,60 +1,84 @@
 * {
     margin: 0;
     padding: 0;
-}
-ul li{
+  }
+  
+  ul li {
     list-style: none;
-}
-a {
-    text-decoration: none;
-    color:#000000;
-}
-a :hover{
-    color: white;
-}
-header #menu {
-    font:bold 16px "malgun gothic";
-    width:100%;
-    height:50px;
-    background: #f0f0f044;
-    color:black;
-    line-height: 50px; 
-    margin:0 auto;
+  }
+  
+  a {
+    text-decoration: none !important; /* Bootstrap의 기본 스타일 덮어쓰기 */
+    color: #000000 !important; /* 기본 색상 설정 */
+  }
+  
+  header #menu a:hover {
+    color: white !important; /* Hover 색상 설정 */
+  }
+  
+  header {
+    position: fixed; /* 고정 위치 */
+    top: 0; /* 화면 상단에 위치 */
+    left: 0; /* 화면 왼쪽에 위치 */
+    width: 100%; /* 전체 너비 */
+    z-index: 1000; /* 높은 z-index 값으로 다른 요소들 위에 표시 */
+    text-align: center;
+  }
+  
+  header #menu {
+    font: bold 16px "malgun gothic";
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    margin: 0;
     text-align: center;
     justify-content: center;
-}
-
-header #menu > ul > li {
-    float:left;
-    width:140px;
-    position:relative;
-}
-header #menu > ul > li > ul {
-    width:130px;
-    display:none;
+    background: #F0F0F044;
+  }
+  
+  header #menu > ul {
+    padding: 0;
+    margin: 0;
+  }
+  
+  header #menu > ul > li {
+    float: left;
+    width: 140px;
+    position: relative;
+  }
+  
+  header #menu > ul > li > ul {
+    width: 130px;
+    display: none;
     position: absolute;
-    font-size:14px;
+    font-size: 14px;
     background: #F0F0F0;
-}
-header #menu > ul > li:hover > ul {
-    display:block;
-    
-}
-header #menu > ul > li > ul > li:hover {
+  }
+  
+  header #menu > ul > li:hover > ul {
+    display: block;
+  }
+  
+  header #menu > ul > li > ul > li:hover {
     background: #002063;
     color: white;
     transition: ease 1s;
-    }
-header #menu > ul > li > ul > a:hover {
+  }
+  
+  header #menu > ul > li > ul > li a:hover {
     color: #002063;
-    transition: ease 1s;
-    }
-footer {
+  }
+  
+  
+  
+  footer {
     background-color: #002063;
     color: white;
     padding: 30px;
     text-align: center;
-    position: fixed; /*위치 고정*/
+    position: fixed; /* 위치 고정 */
     width: 100%;
     bottom: 0;
+    left: 0;
+    z-index: 1000; /* 필요한 경우 footer의 z-index 설정 */
   }
