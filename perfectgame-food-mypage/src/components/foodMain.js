@@ -1,18 +1,16 @@
 import React from 'react';
-import Header from './components/Header';
-import Footer from './components/Footer';
 import './foodmain.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-const App = () => {
+const FoodMain = () => {
   return (
     <div>
-      <Header />
       <div className="container">
         <div className="row mt-6">
           <div className="col-md-4">
             <div className="card">
               <div className="card-body">
-                <img src="image/LG 트윈스.png" className="card-img-top" alt="LG 트윈스" style={{ margin: '20px 0' }} />
+                <img src="LG 트윈스.png" className="card-img-top" alt="LG 트윈스" style={{ margin: '20px 0' }} />
                 <h5 className="card-title">서울 잠실야구장</h5>
                 <a href="#" className="btn btn-primary">구경하기</a>
               </div>
@@ -21,7 +19,7 @@ const App = () => {
           <div className="col-md-4">
             <div className="card">
               <div className="card-body">
-                <img src="image/키움 히어로즈.png" className="card-img-top" alt="키움 히어로즈" style={{ margin: '20px 0' }} />
+                <img src="키움 히어로즈.png" className="card-img-top" alt="키움 히어로즈" style={{ margin: '20px 0' }} />
                 <h5 className="card-title">서울 고척스카이돔</h5>
                 <a href="#" className="btn btn-primary">구경하기</a>
               </div>
@@ -32,16 +30,16 @@ const App = () => {
           <div className="col-md-4">
             <div className="card">
               <div className="card-body">
-                <img src="image/SSG 랜더스.png" className="card-img-top" alt="SSG 랜더스" style={{ margin: '20px 0' }} />
+                <img src="SSG 랜더스.png" className="card-img-top" alt="SSG 랜더스" style={{ margin: '20px 0' }} />
                 <h5 className="card-title">인천 SSG랜더스필드</h5>
-                <a href="#" className="btn btn-primary">구경하기</a>
+                <a href="" className="btn btn-primary">구경하기</a>
               </div>
             </div>
           </div>
           <div className="col-md-4">
             <div className="card">
               <div className="card-body">
-                <img src="image/KIA 타이거즈.png" className="card-img-top" alt="KIA 타이거즈" style={{ margin: '20px 0' }} />
+                <img src="KIA 타이거즈.png" className="card-img-top" alt="KIA 타이거즈" style={{ margin: '20px 0' }} />
                 <h5 className="card-title">광주 기아챔피언스필드</h5>
                 <a href="#" className="btn btn-primary">구경하기</a>
               </div>
@@ -49,9 +47,8 @@ const App = () => {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 };
 
-export default App;
+export default FoodMain;

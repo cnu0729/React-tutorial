@@ -21,8 +21,9 @@
 
 img {
     width: 500px;
-    height: auto;
+    height: 400px;
 }
+
 
 .food-container {
     display: flex;

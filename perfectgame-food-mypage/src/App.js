@@ -1,13 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
-import foodMain from'./components/foodMain';
-import FoodMap from './components/foodMap';
+import FoodMain from'./components/foodMain';
 
 function App() {
   return (
     <div className="App">
-      <foodMain />
-      <FoodMap />
+      <FoodMain />
     </div>
   );
 }
