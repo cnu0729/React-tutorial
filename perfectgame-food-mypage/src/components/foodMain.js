@@ -7,7 +7,7 @@ const FoodMain = () => {
     <div>
       <div className="container">
         <div className="row mt-6">
-          <div className="col-md-4">
+          <div className="col-md-6">
             <div className="card">
               <div className="card-body">
                 <img src="LG 트윈스.png" className="card-img-top" alt="LG 트윈스" style={{ margin: '20px 0' }} />
@@ -16,7 +16,7 @@ const FoodMain = () => {
               </div>
             </div>
           </div>
-          <div className="col-md-4">
+          <div className="col-md-6">
             <div className="card">
               <div className="card-body">
                 <img src="키움 히어로즈.png" className="card-img-top" alt="키움 히어로즈" style={{ margin: '20px 0' }} />
@@ -27,7 +27,7 @@ const FoodMain = () => {
           </div>
         </div>
         <div className="row mt-6">
-          <div className="col-md-4">
+          <div className="col-md-6">
             <div className="card">
               <div className="card-body">
                 <img src="SSG 랜더스.png" className="card-img-top" alt="SSG 랜더스" style={{ margin: '20px 0' }} />
@@ -36,7 +36,7 @@ const FoodMain = () => {
               </div>
             </div>
           </div>
-          <div className="col-md-4">
+          <div className="col-md-6">
             <div className="card">
               <div className="card-body">
                 <img src="KIA 타이거즈.png" className="card-img-top" alt="KIA 타이거즈" style={{ margin: '20px 0' }} />

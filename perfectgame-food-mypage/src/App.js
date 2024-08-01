@@ -1,6 +1,6 @@
-import logo from './logo.svg';
 import './App.css';
 import FoodMain from'./components/foodMain';
+import FoodSG  from './components/foodSG';
 
 function App() {
   return (

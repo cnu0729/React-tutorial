@@ -1,69 +1,29 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-li{
-    list-style: none;
-}
-#pg-1 a {
-    text-decoration: none;
-    color: white;
-}
-#pg-2 a {
-    text-decoration: none;
-    color: white;
-}
-#pg-3 a {
-    text-decoration: none;
-    color: white;
-}
-#pg-4 a {
-    text-decoration: none;
-    color: white;
-}
-a :hover{
-    color: white;
-}
-
-.playground-box{
-    width: 50%;
-    height: 50%;
-    text-align: center;
-    justify-content: center;
-    position: absolute;
-    margin: 0 auto;
-
-}
-#pg-1 {
-    padding: 30px;
-    background-color: #8A1A4D;
-    border-radius: 10px;
-    text-align: center;
-    margin: 5%;
-}
-#pg-2{
-    padding: 30px;
-    background-color: #8A1A4D;
-    border-radius: 10px;
-    text-align: center;
-    margin: 5%;
-}
-#pg-3 {
-    padding: 30px;
-    background-color: #8A1A4D;
-    border-radius: 10px;
-    text-align: center;
-    margin: 5%;
-}
-#pg-4 {
-    padding: 30px;
-    background-color: #8A1A4D;
-    border-radius: 10px;
-    text-align: center;
-    margin: 5%;
-}
-
-  .card {
-    margin-bottom: 30px; /* 카드 간의 하단 여백을 설정 */
+.card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center; /* 중앙 정렬 */
+  }
+  
+  .card-img-top {
+    width: 100%;
+    height: auto; /* 이미지 배율 유지 */
+    max-height: 200px; /* 이미지 크기를 제한하여 균일하게 맞춥니다 */
+    object-fit: contain; /* 이미지가 크기에 맞게 조정되도록 합니다 */
+  }
+  
+  .card-title {
+    margin-top: 10px;
+  }
+  
+  .btn {
+    align-self: center; /* 버튼을 카드 하단 중앙에 배치합니다 */
   }
   
