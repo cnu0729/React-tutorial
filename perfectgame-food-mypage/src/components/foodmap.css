@@ -27,22 +27,11 @@ img {
 
 .food-container {
     display: flex;
-    justify-content: space-between;
     gap: 10px;
-}
-
-#three{
+    justify-content: center;
     padding: 30px;
     margin: 10px;
     border-radius: 10px;
     background-color: #f0f0f0;
-    flex: 1;
-}
-
-#one{
-    padding: 30px;
-    margin: 10px;
-    border-radius: 10px;
-    background-color: #f0f0f0;
-    flex: 1;
+    text-decoration: none;
 }

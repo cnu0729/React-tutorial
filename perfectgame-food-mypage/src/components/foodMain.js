@@ -12,7 +12,7 @@ const FoodMain = () => {
               <div className="card-body">
                 <img src="LG 트윈스.png" className="card-img-top" alt="LG 트윈스" style={{ margin: '20px 0' }} />
                 <h5 className="card-title">서울 잠실야구장</h5>
-                <a href="#" className="btn btn-primary">구경하기</a>
+                <a href="./foodmap" className="btn btn-primary">구경하기</a>
               </div>
             </div>
           </div>
@@ -32,7 +32,7 @@ const FoodMain = () => {
               <div className="card-body">
                 <img src="SSG 랜더스.png" className="card-img-top" alt="SSG 랜더스" style={{ margin: '20px 0' }} />
                 <h5 className="card-title">인천 SSG랜더스필드</h5>
-                <a href="" className="btn btn-primary">구경하기</a>
+                <a href="#" className="btn btn-primary">구경하기</a>
               </div>
             </div>
           </div>

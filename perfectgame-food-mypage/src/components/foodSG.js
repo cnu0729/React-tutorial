@@ -1,32 +1,55 @@
-import React, { useState } from 'react';
-import './foodSG.css';
+import React, { useState, useEffect } from "react";
+import "./foodSG.css";
+import axios from 'axios';
 
 function FoodSG() {
   const [reviews, setReviews] = useState([]);
-  const [newReview, setNewReview] = useState('');
-  const [userName, setUserName] = useState('');
+  const [newReview, setNewReview] = useState("");
+  const [userName, setUserName] = useState("");
+  const [menu, setMenu] = useState([]);
+  const [storeName, setStoreName] = useState("");
+
+  useEffect(() => {
+    // 메뉴 및 상호명 가져오기 (예: playgroundId가 1인 경우)
+    axios.get('/api/food/{playground}')
+      .then(response => {
+        const foodData = response.data;
+        if (foodData.length > 0) {
+          setStoreName(foodData[0].foodName); // 상호명 설정
+          const parsedMenu = foodData.map(item => ({
+            foodName: item.foodName,
+            foodMenu: JSON.parse(item.foodMenu),
+            foodPrice: JSON.parse(item.foodPrice)
+          }));
+          setMenu(parsedMenu);
+        }
+      })
+      .catch(error => {
+        console.error('Error fetching food details:', error);
+      });
+  }, []);
 
   const handleAddReview = () => {
     if (userName.trim() && newReview.trim()) {
       const newReviews = [
         ...reviews,
-        { id: Date.now(), userName, content: newReview }
+        { id: Date.now(), userName, content: newReview },
       ];
       setReviews(newReviews);
-      setNewReview('');
-      setUserName('');
+      setNewReview("");
+      setUserName("");
     }
   };
 
   const handleDeleteReview = (id) => {
-    setReviews(reviews.filter(review => review.id !== id));
+    setReviews(reviews.filter((review) => review.id !== id));
   };
 
   const handleEditReview = (id) => {
-    const newContent = prompt('수정할 내용을 입력하세요');
+    const newContent = prompt("수정할 내용을 입력하세요");
     if (newContent) {
       setReviews(
-        reviews.map(review =>
+        reviews.map((review) =>
           review.id === id ? { ...review, content: newContent } : review
         )
       );
@@ -36,17 +59,12 @@ function FoodSG() {
   return (
     <div className="App">
       <div className="store-info">
-        <div className="location">위치 | 1주 2층 & 3루 1층</div>
-        <div className="store-name">원샷치킨</div>
+        <div className="store-name">{storeName}</div>
         <div className="menu">
           <ul>
-            <li>원샷커리치킨 12.5</li>
-            <li>원샷어니언탱지치킨 12.5</li>
-            <li>원샷핫로제눈꽃치킨 13.0</li>
-            <li>원샷 크림 새우 14.0</li>
-            <li>원샷 칠리 새우 14.0</li>
-            <li>원샷크림치즈볼 13.0</li>
-            <li>원샷통살새우볼 13.0</li>
+            {menu.map((item) => (
+              <li key={item.foodId}>{item.foodName} {item.foodPrice}</li>
+            ))}
           </ul>
         </div>
       </div>
@@ -66,12 +84,14 @@ function FoodSG() {
         />
         <button onClick={handleAddReview}>후기 등록</button>
         <div className="reviews-container">
-          {reviews.map(review => (
+          {reviews.map((review) => (
             <div key={review.id} className="review">
               <div>
                 <strong>{review.userName}</strong>: {review.content}
               </div>
-              <button onClick={() => handleDeleteReview(review.id)}>삭제</button>
+              <button onClick={() => handleDeleteReview(review.id)}>
+                삭제
+              </button>
               <button onClick={() => handleEditReview(review.id)}>수정</button>
             </div>
           ))}
